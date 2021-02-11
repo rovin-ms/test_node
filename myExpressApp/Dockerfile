@@ -1,13 +1,17 @@
-FROM node:15.8.0-alpine3.10
+FROM node:9
 
-WORKDIR /usr/src/app
+# Create app directory
+WORKDIR /app
 
+# Install app dependencies
 COPY package*.json ./
 
 RUN npm install
 
-COPY . .
+# Copying rest of the application to app directory
+COPY . /app
 
-EXPOSE 8080
+# Expose the port and start the application
+EXPOSE 3000
 
-CMD [ "node", "server.js" ]
+CMD ["npm","start"]
