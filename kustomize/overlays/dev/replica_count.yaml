@@ -3,4 +3,4 @@ kind: Deployment
 metadata:
   name: node-test 
 spec:
-  replicas: 11 
+  replicas: 1 
