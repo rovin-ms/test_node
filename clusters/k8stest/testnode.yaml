@@ -6,7 +6,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 20s
-  path: ./kustomize
+  path: ./home/rvincent/repos/test_node/kustomize/app
   prune: true
   sourceRef:
     kind: GitRepository
