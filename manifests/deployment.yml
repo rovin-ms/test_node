@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: testnode 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: testnode
+  template:
+    metadata:
+      labels:
+        app: testnode 
+    spec:
+      containers:
+        - name: testnode 
+          image: ronvincentorg.azurecr.io/testnode
+          ports:
+          - containerPort: 3000
